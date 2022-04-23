@@ -25,7 +25,7 @@ export default function App() {
     console.log("Scanning luggage");
     await axios
       .post(
-        `https://da0c-112-79-165-230.ngrok.io/api/scanLuggage`,
+        `${BASE_URL}/api/scanLuggage`,
         {},
         {
           params: {
