@@ -25,7 +25,7 @@ export default function App() {
     console.log("Scanning luggage");
     await axios
       .post(
-        `${BASE_URL}/api/scanLuggage`,
+        `https://fb06-112-79-140-3.ngrok.io/api/scanLuggage`,
         {},
         {
           params: {
@@ -39,6 +39,7 @@ export default function App() {
       )
       .then((response) => {
         setText(response.data.message);
+        console.log(response.data.data.id);
       })
       .catch((error) => {
         console.log(error.response);
